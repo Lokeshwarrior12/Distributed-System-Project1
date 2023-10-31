@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package image;
+
+service ImageService {
+    rpc GetRandomImage (ImageRequest) returns (ImageResponse);
+}
+
+message ImageRequest {
+    string object_name = 1;
+}
+
+message ImageResponse {
+    bytes image_data = 1;
+}
